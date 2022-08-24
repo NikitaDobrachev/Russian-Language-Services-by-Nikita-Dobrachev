@@ -340,7 +340,7 @@ body.menu-expanded nav button {
 #home::before {
   content: '';
   width: 100%;
-  height: calc(78% + var(--nav-height));
+  height: calc(80% + var(--nav-height));
   background-color: var(--brand-light);
   display: block;
 
@@ -487,6 +487,8 @@ body.menu-expanded nav button {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+
+  width: auto;
 }
 
 #testimonials .carousel .carousel-card .testimonials-card-author img {
@@ -501,6 +503,7 @@ body.menu-expanded nav button {
   line-height: 2.8px;
   color: var(--primary-color);
   margin: 0;
+
 }
 
 #testimonials .carousel .carousel-card .testimonials-card-author svg#mgid-logo {
@@ -600,7 +603,7 @@ body.menu-expanded nav button {
 /*=== CONTACT BANNER ==================================*/
 .contact-banner {
   background: var(--brand-light-2);
-  padding-block: 10rem;
+  padding-block: 0;
 }
 
 .contact-banner .wrapper {
@@ -609,9 +612,10 @@ body.menu-expanded nav button {
   display: flex;
   flex-direction: column;
   padding: 6rem;
-  height: 40rem;
+  height: 150%;
   justify-content: space-between;
   align-items: center;
+  padding: 5rem;
 }
 
 .contact-banner .wrapper h2 {
@@ -620,6 +624,8 @@ body.menu-expanded nav button {
   font-weight: 700;
   font-size: 4rem;
   line-height: 5.2rem;
+
+  margin-bottom: 3.2rem;
 }
 
 .contact-banner .wrapper a {
@@ -675,6 +681,28 @@ body.menu-expanded nav button {
 #about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
+}
+
+#about .content p a {
+  text-decoration: none;
+
+  color: var(--primary-color);
+
+  transition: .2s;
+}
+
+#about .content p a:hover {
+  color: var(--paragraph);
+
+  transition: .2s;
+}
+
+#about .content p a[tabindex]:focus {
+  color: var(--paragraph);
+
+  transition: .2s;
+
+  text-decoration: underline;
 }
 
 #about img {
@@ -792,6 +820,16 @@ footer .social-links {
 }
 
 /*=== RESPONSIVE ==========================*/
+@media (max-width: 500px) {
+  /*=== TESTIMoNIALS =============*/
+  #testimonials .carousel .carousel-card .testimonials-card-author {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: start;
+  }
+}
 
 @media (min-width: 1024px) {
   /*=== GERAL =============================*/
@@ -1080,6 +1118,10 @@ footer .social-links {
   }
 
   /*=== CONTACT BANNER ================*/
+aside.contact-banner {
+  padding-block: 10rem;
+}
+
   aside.contact-banner .wrapper {
     padding: 10rem;
 
