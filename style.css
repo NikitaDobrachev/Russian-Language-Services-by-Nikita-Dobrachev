@@ -487,8 +487,6 @@ body.menu-expanded nav button {
   display: flex;
   align-items: center;
   gap: 1.6rem;
-
-  width: auto;
 }
 
 #testimonials .carousel .carousel-card .testimonials-card-author img {
@@ -500,7 +498,7 @@ body.menu-expanded nav button {
 
 #testimonials .carousel .carousel-card .testimonials-card-author p {
   font-weight: 700;
-  line-height: 2.8px;
+  line-height: 2.8rem;
   color: var(--primary-color);
   margin: 0;
 
@@ -574,7 +572,7 @@ body.menu-expanded nav button {
   justify-content: space-evenly;
   align-items: center;
 
-  margin-bottom: 1rem;
+  margin-bottom: 10rem;
 }
 
 #testimonials .businesses .businesses-logos a,
@@ -1130,6 +1128,10 @@ aside.contact-banner {
     flex-direction: row;
 
     align-content: space-between;
+  }
+
+  aside.contact-banner .wrapper h2 {
+    margin-bottom: 0;
   }
 
   aside.contact-banner .wrapper a {
